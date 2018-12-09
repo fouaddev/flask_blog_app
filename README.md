@@ -10,8 +10,7 @@ You will need to install Python 3 and several frameworks you can find in the ten
 For installing the external packages, you can use pip or conda.
 
 
-## To run the app on the command line (ie: CMD or Shell):
+## To run the app on the command line (ie: CMD or Shell): : snake :
 ```
 python app.py
 ```
-: phone :
