@@ -16,23 +16,26 @@ For installing the external packages, pip (or conda) works great.
 ## To run the app on the command line (ie: CMD or Shell):
 ### Step 1:
 Install flask with the following command:
+```
 pip install flask
+```
 
 ### Step 2:
 Install flask-sqlalchemy with the following command:
+```
 pip install flask-sqlalchemy
+```
 
 ### Step 3:
-Unzip the zip folder of my app.
+Unzip the zip folder of the app.
 Now open your command line, and make sure your current directory is the app folder directory.
 
 ### Step 4:
-Run the app.py file inside my app folder as follows:
+Run the app.py file inside the app folder as follows:
 ```
 python app.py
 ```
 
 ### Step 5:
-Open your browser and go to your localhost host address to see the app (in my case it is by default localhost:5000)
-
+Open your browser and go to your localhost host address to see the app (the default address is either http://localhost:5000/ or http://127.0.0.1:5000 )
 
