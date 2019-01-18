@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Simple FullStack Blog | Fouad Boukredine</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="{{ url_for('static', filename='all.min.css') }}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename='clean-blog.min.css') }}" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="{{ url_for('home') }}">Simple FullStack Blog | Fouad Boukredine</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('about') }}">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('create_post') }}">Create Post</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('{{ url_for('static', filename='home-bg.jpg') }}')">
+      <div class="overlay"></div>
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+              <h1>Simple is Beautiful</h1>
+              <span class="subheading">I believe in the beauty of simple things</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+        {% for post in posts %}
+          <div class="post-preview">
+            <!-- <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap"> -->
+            <a href="{{ url_for('post', post_id=post.id) }}">
+              <h2 class="post-title">
+                {{ post.title }}
+              </h2>
+              <h4 class="post-subtitle">
+                {{ post.post_description }}
+              </h4>
+              <a href="{{ url_for('post', post_id=post.id) }}" class="btn btn-primary">Read More &rarr;</a>
+            </a>
+            <p class="post-meta">Posted by {{ post.author }} on {{ post.post_date.strftime('%B %d, %Y') }}</p>
+          </div>
+        {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <hr>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <ul class="list-inline text-center">
+              <li class="list-inline-item">
+                <a href="http:\\www.twitter.com" target="_blank">
+                  <span class="fa-stack fa-lg">
+                    <img src="{{ url_for('static' ,filename='twitter.svg') }}">
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="http:\\www.facebook.com" target="_blank">
+                  <span class="fa-stack fa-lg">
+                    <img src="{{ url_for('static' ,filename='facebook.svg') }}">
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="http:\\www.github.com" target="_blank">
+                  <span class="fa-stack fa-lg">
+                    <img src="{{ url_for('static' ,filename='github.svg') }}">
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="copyright text-muted">Copyright &copy; Simple FullStack Blog 2018 | Fouad Boukredine</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='bootstrap.bundle.min.js') }}"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="{{ url_for('static', filename='clean-blog.min.js') }}"></script>
+
+  </body>
+
+</html>

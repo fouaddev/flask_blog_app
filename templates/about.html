@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Simple FullStack Blog | Fouad Boukredine</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="{{ url_for('static', filename='all.min.css') }}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename='clean-blog.min.css') }}" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="/">Simple FullStack Blog | Fouad Boukredine</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('about') }}">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('create_post') }}">Create Post</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('{{ url_for('static', filename='about-bg.jpg') }}')">
+      <div class="overlay"></div>
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="page-heading">
+              <h1>About Fouad Boukredine</h1>
+              <span class="subheading">I love programming in Python! It's a lot of fun!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <p>Hello, my name is Fouad Boukredine, and my final project for the cs521 class is a full stack web application build following modern web development best practices.</p>
+          <p>This project is a fullstack web application, a simple blog app that allows you to view posts in a modern fashion with cool design. Users can create a new post and publish it in the blog. All posts are displayed in the home page of the blog.</p>
+          <p>For the front-end I used HTML5 and CSS3, Bootstrap, and the Jinja2 templating engine for Python. Jinja2's performance is impressively fast! it allows to use logic right inside HTML pages. It also allows to reuse code in other HTML pages, and that made my development time faster and fun!</p>
+          <p>For the back-end, I used the Flask framework that Python offers. I chose it among the other frameworks for its simplicity and agility. It comes with "batteries included" as it has a lot of useful plugins and libraries, which makes developing a web application a lot faster and easier.</p>
+          <p>As for database, I used SQLite database for its simplicity of use and effectiveness for small projects. It is the right fit for my simple fullstack blog app. I used SQLite with SQLAlchemy which is ORM (object relational mapper) that allowed me to interact with my Python objects easily. For that, I used a Python extension called Flask-SQAlchemy.</p>
+          <p>Finally, for testing and exception handling, I took care of 404 errors (or "page not found" error), and HTTP500, and also custom typical "try/except" erro handling. The Python framework Flask actually comes with a nice built-in tool to make it a little bit easier to handle errors in a Flask web based application.</p>
+          <p>I hope you like this blog, and thank you for reading my about me page :)</p>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <hr>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <ul class="list-inline text-center">
+              <li class="list-inline-item">
+                <a href="http:\\www.twitter.com" target="_blank">
+                  <span class="fa-stack fa-lg">
+                    <img src="{{ url_for('static' ,filename='twitter.svg') }}">
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="http:\\www.facebook.com" target="_blank">
+                  <span class="fa-stack fa-lg">
+                    <img src="{{ url_for('static' ,filename='facebook.svg') }}">
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="http:\\www.github.com" target="_blank">
+                  <span class="fa-stack fa-lg">
+                    <img src="{{ url_for('static' ,filename='github.svg') }}">
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="copyright text-muted">Copyright &copy; Simple FullStack Blog 2018 | Fouad Boukredine</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='bootstrap.bundle.min.js') }}"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="{{ url_for('static', filename='clean-blog.min.js') }}"></script>
+
+  </body>
+
+</html>
