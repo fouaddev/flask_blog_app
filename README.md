@@ -13,7 +13,7 @@ For installing the external packages, pip (or conda) works great.
 
 
 
-## To run the app on the command line (ie: CMD or Shell): : snake :
+## To run the app on the command line (ie: CMD or Shell):
 ### Step 1:
 Install flask with the following command:
 pip install flask
