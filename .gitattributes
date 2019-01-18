@@ -1,1 +1,5 @@
-HTML/* linguist-vendored
+* linguist-vendored
+*.py linguist-vendored=false
+*.js linguist-vendored=false
+*.db linguist-vendored=false
+*.css linguist-vendored=false
