@@ -14,9 +14,6 @@ For installing the external packages, pip (or conda) works great.
 
 
 ## To run the app on the command line (ie: CMD or Shell): : snake :
-```
-python app.py
-```
 Step 1:
 Install flask with the following command:
 pip install flask
@@ -31,7 +28,11 @@ Now open your command line, and make sure your current directory is the app fold
 
 Step 4:
 Run the app.py file inside my app folder as follows:
+```
 python app.py
+```
 
 Step 5:
 Open your browser and go to your localhost host address to see the app (in my case it is by default localhost:5000)
+
+
