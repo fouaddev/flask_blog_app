@@ -1,9 +1,8 @@
-# Light Weight robust Blog App:
-This is a modern blog web application built using HTML5 and CSS3 and Bootstrap 3 for front-end, with the Flask framework for the back-end.
+# Blog Web App using Flask:
+This is a simple yet modern blog web application with minimal dependencies. It's built using HTML5, CSS3, and Bootstrap 3 for front-end, with the Flask framework for the back-end and SQLite for database.
 
 ## Features:
 - CRUD functionalities.
-- Authentication.
 
 ## Requirements for running the App:
 You will need to install Python 3 and several frameworks you can find in the templates folder.
