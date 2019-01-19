@@ -1,16 +1,11 @@
 # Blog Web App using Flask:
 This is a simple yet modern blog web application with minimal dependencies. It's built using HTML5, CSS3, and Bootstrap 3 for front-end, with the Flask framework for the back-end and SQLite for database.
 
-## Features:
-- CRUD functionalities.
-
 ## Requirements for running the App:
 You will need to install Python 3 and several frameworks you can find in the templates folder.
 You should have pip installed on your computer (if you have python 3 installed, it comes with it automatically),
 and also the database SQLite (If you don't have it, download and install it from here: https://www.sqlite.org/download.html).
 For installing the external packages, pip (or conda) works great.
-
-
 
 ## To run the app on the command line (ie: CMD or Shell):
 ### Step 1:
